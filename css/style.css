@@ -1,0 +1,228 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+    scroll-behavior: smooth;
+}
+/*header style*/
+header{
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:40px 100px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    transition: 0.5s;
+    max-height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+}
+header.sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+}
+header.sticky .logo h1 span{
+    color: #444444;
+}
+header.sticky .nav__links li a{
+    color: #444444;
+}
+header.sticky .cats button{
+   background: #444444;
+   color:#fff;
+}
+header.sticky .nav__links li a:hover{
+    color: #fece15;
+}
+header.sticky .cats button:hover{
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    background-color:#fece15;
+    color: #444444;
+}
+.logo{
+    cursor: pointer;
+  margin-right: auto;
+ margin-left: 0;
+}
+.logo h1{
+    color: #fece15;
+}
+
+.logo h1 span{
+    color: #fff;
+}
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+.nav__links li a:hover{
+    color:#fece15;
+}
+.cats button{
+    padding: 9px 25px;
+    background: #fff;
+    margin-left: 28px;
+    color: #444444;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s ;
+}
+.cats button:hover{
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    background-color:#fece15;
+    color: #444444;
+}
+/*End of header style*/
+.banner{
+ position: relative;
+ width: 100%;
+ min-height: 100vh;
+ justify-content: center;
+ align-items: center;
+ background: linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/images/n1.jpg") center center/cover no-repeat;
+}
+@media(max-width:350px){
+header .cats{
+    display: none;
+}
+}
+@media(max-width:991px){
+    header, header.sticky{
+        padding:10px 20px;
+    }
+   header .nav__links{
+       display: none;
+   }
+   .menu-toggle{
+       position: relative;
+       width: 40px;
+       height: 40px;
+       background: url("../assets/icons/menu.ico");
+       background-size: 30px; 
+       background-repeat: no-repeat;
+       background-position: center;
+       cursor: pointer;
+   }
+   .menu-toggle.active{
+       background: url('../assets/icons/menu.ico');
+       background-size: 30px; 
+       background-repeat: no-repeat;
+       background-position: center;
+   }
+   header.sticky .menu-toggle{
+       filter: invert(1);
+   }
+   header .nav__links.active{
+       width: 100%;
+       height:calc(100% - 68px);
+       top: 68px;
+        left: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .nav__links li{
+        list-style: none;
+        margin-left: 0;
+
+    }
+    header .nav__links li a{
+        color: #444444;
+        font-size: 1.6rem; 
+    }
+  }
+
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  min-height: 700px;
+  background: #fff;
+}
+.container .card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 60px 10px;
+    padding:20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+.container .card:hover{
+    height: 420px;
+}
+.container .card .imgbox{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 5px;
+    transition: 0.5s;
+}
+.container .card .imgbox img{
+    max-width: 100%;
+    border-radius: 10%;
+}
+
+.container .card .contant{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #444444;
+    background: #fece15;
+    margin-top:-60px;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+}
+.container .card .tile{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #fff;
+    margin-top:10px;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+opacity: 0;
+
+}
+.container .card .tile p{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: "Times New Roman", Times, serif;
+}
+.container .card:hover .contant{
+    margin-top:-90px;
+    transition-delay: 0.3s;
+    }
+.container .card:hover .tile{
+    visibility: visible;
+    opacity: 1;
+    margin-top:0px;
+    transition-delay: 0.3s;
+    overflow: hidden;
+}

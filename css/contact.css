@@ -1,0 +1,134 @@
+.contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    margin: 30px 0;
+}
+.contact-form > *{
+    width: 50%;
+}
+.contact-form .first-container{
+    background: linear-gradient(45deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("../assets/images/BackGround.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact-form .first-container .info-container div{
+    margin: 24px 0;
+}
+.contact-form .first-container .info-container div h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-bottom: 10px;
+}
+.contact-form .first-container .info-container div p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fece15;
+
+}
+.contact-form .first-container .info-container div:first-of-type p{
+    max-width: 260px;
+    color: #444444;
+}
+.contact-form .secound-container{
+    padding: 30px;
+}
+.contact-form .secound-container form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form .secound-container h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fece15;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-form .secound-container .form-group{
+    margin-bottom: 10px;
+}
+.contact-form .secound-container .form-group *{
+    min-height: 55px;
+    border: 1px solid #e6e6e6;
+    padding: 0 20px;
+} 
+.contact-form .secound-container .form-group label{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    color: #444444;
+    text-transform: uppercase;
+    margin-top: -1px;
+}
+.contact-form .secound-container .form-group:first-of-type input{
+    width: 50.1%;
+    margin-right: -5px;
+
+}
+.contact-form .secound-container .form-group input{
+    width: 100%;
+    font-size: 15px;
+    margin-top: -2px;
+}
+.contact-form .secound-container .form-group input::placeholder,
+.contact-form .secound-container .form-group textarea::placeholder{
+color: #999;
+}
+.contact-form .secound-container .form-group textarea{
+    width: 100%;
+    min-height: 80px;
+    resize: none;
+    padding: 10px 20px;
+    margin-top: -1px;
+
+}
+.contact-form .secound-container form button{
+    width: 200px;
+    height: 50px;
+    background: #fece15;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 0;
+    position: relative;
+    left: calc(50% - 100px);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.contact-form .secound-container form button:hover{
+    background: #444444;
+}
+@media  screen and (max-width:800px){
+    .contact-form{
+        width: 90vh;
+    }
+    
+}
+@media  screen and (max-width:700px){
+    .contact-form{
+        flex-direction: column-reverse;
+        
+    }
+    .contact-form > *{
+        width: 100%;
+    }
+    .contact-form .first-container{
+        padding: 40px 0;
+
+    }
+    
+}

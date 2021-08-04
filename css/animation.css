@@ -1,0 +1,15 @@
+.reveal1{
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  .reveal2{
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  .reveal1.active,.reveal2.active{
+    transform: translateX(0px);
+    opacity: 1;
+  
+  }
